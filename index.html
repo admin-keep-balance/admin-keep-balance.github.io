@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Адмін Панель - Keep Balance</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+</head>
+<body>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+    <div ng-app="keepBalanceApp">  
+        <div class="container main-block">
+            <h3>Замовлення:</h2>
+                
+            <table class="table table-bordered" ng-controller="OrdersCtrl">
+                <thead>
+                    <tr>
+                        <th>Ім'я</th>
+                        <th>Прізвище</th>
+                        <th>Телефон</th>
+                        <th>К-сть</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="(index, order) in orders | orderBy: index: true" ng-class="!order.accepted ? 'unaccepted' : ''">
+                        <td>{{ order.firstName }}</td>
+                        <td>{{ order.lastName }}</td>
+                        <td>{{ order.phone }}</td>
+                        <td>{{ order.count ? order.count : 1 }}</td>
+                        <td>
+                            <i class="glyphicon glyphicon-unchecked" ng-if="!order.accepted" ng-click="acceptOrder(order)" title="Прийняти"></i>
+                            <i class="glyphicon glyphicon-check" ng-if="order.accepted"></i>
+                        </td>
+                        <td><i class="glyphicon glyphicon-remove remove" ng-click="removeOrder(order)" title="Видалити"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
+    </div>
+
+    <!-- Common -->
+    <script src="./js/common.js"></script>
+
+    <!-- Orders -->
+    <script src="./js/orders.js"></script>
+</body>
+</html>

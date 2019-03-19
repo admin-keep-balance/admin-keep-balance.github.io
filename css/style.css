@@ -1,0 +1,47 @@
+body {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url('./img/bg-back.jpg');
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%), url('./img/bg-back.jpg');
+}
+
+.remove {
+    cursor: pointer;
+}
+
+th, td {
+    width: 28%;  
+}
+
+th:nth-last-child(3), td:nth-last-child(3) {
+    width: 8%;
+    text-align: center;
+}
+
+th:nth-last-child(-n+2), td:nth-last-child(-n+2) {
+    width: 4%;
+    text-align: center;
+    color: #de0000;
+}
+
+tr.unaccepted > td {
+    background-color: #ffe8e8;
+}
+
+.main-block {
+    background-color: #e2e2e2;
+    margin: 3% auto;
+    padding: 2px 20px;
+    border-radius: 20px;
+    border: 1px solid #c7c7c7;
+}
+
+table {
+    background-color: #ffffff;
+}
+
+.glyphicon-unchecked {
+    color: #000000;
+}
+
+.glyphicon-check {
+    color: #008804;
+}
