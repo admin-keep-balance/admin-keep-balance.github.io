@@ -9,8 +9,12 @@ var config = {
 
 firebase.initializeApp(config);
 
-var app = angular.module("keepBalanceApp", ["firebase"]);
+var app = angular.module("keepBalanceApp", ["firebase", "ngAnimate"]);
 
 app.run(function($rootScope) {
     $rootScope.db = firebase.database().ref();
+    $rootScope.showMobileMenu = false;
+    $rootScope.changeMobileMenu = function() {
+        $rootScope.showMobileMenu = !$rootScope.showMobileMenu;
+    }
 });
