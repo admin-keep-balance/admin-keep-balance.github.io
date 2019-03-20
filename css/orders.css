@@ -1,0 +1,43 @@
+.remove {
+    cursor: pointer;
+}
+
+th, td {
+    width: 29.33333333333333%;  
+}
+
+th:nth-last-child(-n+3), td:nth-last-child(-n+3) {
+    width: 4%;
+    text-align: center;
+}
+
+th:nth-last-child(1), td:nth-last-child(1) {
+    color: #fd0000;
+}
+
+tr.unaccepted > td {
+    background-color: #ffe8e8;
+}
+
+table {
+    background-color: #ffffff;
+}
+
+.glyphicon-unchecked {
+    color: #ababab;
+    cursor: pointer;
+}
+
+.glyphicon-check {
+    color: #008804;
+}
+
+@media screen and (max-width: 480px) {
+    th:nth-last-child(1), td:nth-last-child(1) {
+        display: none;
+    }
+
+    th, td {
+        width: 30.66666666666667;
+    }
+}
