@@ -36,8 +36,8 @@
                 <thead>
                     <tr>
                         <th>Ім'я</th>
-                        <th>Прізвище</th>
                         <th>Телефон</th>
+                        <th>Промокод</th>
                         <th><i class="glyphicon glyphicon-tint"></i></th>
                         <th></th>
                         <th></th>
@@ -46,8 +46,8 @@
                 <tbody>
                     <tr ng-repeat="(index, order) in orders | orderBy: index: true" ng-class="!order.accepted ? 'unaccepted' : ''">
                         <td>{{ order.firstName }}</td>
-                        <td>{{ order.lastName }}</td>
                         <td>{{ order.phone }}</td>
+                        <td>{{ order.promo }}</td>
                         <td>{{ order.count ? order.count : 1 }}</td>
                         <td>
                             <i class="glyphicon glyphicon-unchecked" ng-if="!order.accepted" ng-click="acceptOrder(order)" title="Прийняти"></i>

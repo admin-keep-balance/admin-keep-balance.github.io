@@ -3,7 +3,12 @@
 }
 
 th, td {
-    width: 29.33333333333333%;  
+    width: 40%;  
+}
+
+th:nth-last-child(4), td:nth-last-child(4) {
+    width: 8%;
+    text-align: center;
 }
 
 th:nth-last-child(-n+3), td:nth-last-child(-n+3) {
@@ -30,14 +35,4 @@ table {
 
 .glyphicon-check {
     color: #008804;
-}
-
-@media screen and (max-width: 480px) {
-    th:nth-last-child(1), td:nth-last-child(1) {
-        display: none;
-    }
-
-    th, td {
-        width: 30.66666666666667;
-    }
 }
