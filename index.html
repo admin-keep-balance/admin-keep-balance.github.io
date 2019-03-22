@@ -45,7 +45,7 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="(index, order) in orders | orderBy: index: true" ng-class="!order.accepted ? 'unaccepted' : ''">
-                        <td>{{ order.firstName }}</td>
+                        <td>{{ order.name }}</td>
                         <td>{{ order.phone }}</td>
                         <td>{{ order.promo }}</td>
                         <td>{{ order.count ? order.count : 1 }}</td>
