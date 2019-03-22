@@ -9,7 +9,7 @@ var config = {
 
 firebase.initializeApp(config);
 
-var app = angular.module("keepBalanceApp", ["firebase", "ngAnimate"]);
+var app = angular.module("keepBalanceApp", ["firebase", "ngAnimate", "ngRoute"]);
 
 app.run(function($rootScope) {
     $rootScope.db = firebase.database().ref();
@@ -17,4 +17,12 @@ app.run(function($rootScope) {
     $rootScope.changeMobileMenu = function() {
         $rootScope.showMobileMenu = !$rootScope.showMobileMenu;
     }
+});
+
+app.config(function($routeProvider) {
+    $routeProvider
+        .when('/', {
+            templateUrl: './orders/orders.htm',
+            controller: 'OrdersCtrl'
+        });
 });

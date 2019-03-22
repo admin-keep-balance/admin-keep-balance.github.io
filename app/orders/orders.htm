@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="./css/orders.css">
+<div class="container main-block">
+    <h3>Замовлення:</h2>
+        
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Ім'я</th>
+                <th>Телефон</th>
+                <th>Промокод</th>
+                <th><i class="glyphicon glyphicon-tint"></i></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="(index, order) in orders | orderBy: index: true" ng-class="!order.accepted ? 'unaccepted' : ''">
+                <td>{{ order.name }}</td>
+                <td>{{ order.phone }}</td>
+                <td>{{ order.promo }}</td>
+                <td>{{ order.count ? order.count : 1 }}</td>
+                <td>
+                    <i class="glyphicon glyphicon-unchecked" ng-if="!order.accepted" ng-click="acceptOrder(order)" title="Прийняти"></i>
+                    <i class="glyphicon glyphicon-check" ng-if="order.accepted"></i>
+                </td>
+                <td><i class="glyphicon glyphicon-remove remove" ng-click="removeOrder(order)" title="Видалити"></i></td>
+            </tr>
+        </tbody>
+    </table>
+</div> 
