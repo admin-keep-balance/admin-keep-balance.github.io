@@ -22,7 +22,7 @@ app.run(function($rootScope) {
 app.config(function($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: './orders/orders.htm',
+            templateUrl: './app/orders/orders.htm',
             controller: 'OrdersCtrl'
         });
 });
