@@ -24,5 +24,9 @@ app.config(function($routeProvider) {
         .when('/', {
             templateUrl: './app/orders/orders.htm',
             controller: 'OrdersCtrl'
+        })
+        .when('/info', {
+            templateUrl: './app/infoUa/info.ua.htm',
+            controller: 'InfoUaCtrl'
         });
 });

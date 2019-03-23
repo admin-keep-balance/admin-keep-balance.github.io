@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./app/infoUa/css/info.ua.css">
+
+<h3>Інформація(укр) сайту</h3>
+<form ng-submit="saveHead()">
+    <div class="form-group">
+        <label for="headTitle">Заголовок шапки:</label>
+        <input type="text" class="form-control" ng-model="info.headTitle" id="headTitle" />
+    </div>
+    <div class="form-group">
+        <label for="headDesc">Опис шапки:</label>
+        <textarea class="form-control" ng-model="info.headDesc" id="headDesc" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Зберегти" />
+    </div>
+</form>
