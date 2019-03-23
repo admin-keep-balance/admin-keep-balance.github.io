@@ -14,3 +14,17 @@
         <input type="submit" class="btn btn-primary" value="Зберегти" />
     </div>
 </form>
+
+<form ng-submit="saveAbout()">
+    <div class="form-group">
+        <label for="aboutTitle">Заголовок загальної інформації:</label>
+        <input type="text" class="form-control" ng-model="info.aboutTitle" id="aboutTitle" />
+    </div>
+    <div class="form-group">
+        <label for="aboutDesc">Опис загальної інформації:</label>
+        <textarea class="form-control" ng-model="info.aboutDesc" id="aboutDesc" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Зберегти" />
+    </div>
+</form>

@@ -11,5 +11,12 @@ app.controller("InfoUaCtrl", function($scope, $rootScope, $firebaseObject) {
             headTitle: $scope.info.headTitle,
             headDesc: $scope.info.headDesc
         });
-    }    
+    }
+
+    $scope.saveAbout = function() {
+        infoRepository.update({
+            aboutTitle: $scope.info.aboutTitle,
+            aboutDesc: $scope.info.aboutDesc
+        });
+    }
 });
