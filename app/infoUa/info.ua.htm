@@ -28,3 +28,17 @@
         <input type="submit" class="btn btn-primary" value="Зберегти" />
     </div>
 </form>
+
+<form ng-submit="saveContact()">
+    <div class="form-group">
+        <label for="contactTitle">Заголовок контактів:</label>
+        <input type="text" class="form-control" ng-model="info.contactTitle" id="contactTitle" />
+    </div>
+    <div class="form-group">
+        <label for="contactDesc">Опис контактів:</label>
+        <textarea class="form-control" ng-model="info.contactDesc" id="contactDesc" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Зберегти" />
+    </div>
+</form>

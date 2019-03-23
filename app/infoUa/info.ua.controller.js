@@ -19,4 +19,11 @@ app.controller("InfoUaCtrl", function($scope, $rootScope, $firebaseObject) {
             aboutDesc: $scope.info.aboutDesc
         });
     }
+
+    $scope.saveConcact = function() {
+        infoRepository.update({
+            contactTitle: $scope.info.contactTitle,
+            contactDesc: $scope.info.contactDesc
+        });
+    }
 });
