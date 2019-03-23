@@ -12,10 +12,17 @@ firebase.initializeApp(config);
 var app = angular.module("keepBalanceApp", ["firebase", "ngAnimate", "ngRoute"]);
 
 app.run(function($rootScope) {
+    // Public Properties
     $rootScope.db = firebase.database().ref();
     $rootScope.showMobileMenu = false;
+
+    // Public Methods
     $rootScope.changeMobileMenu = function() {
         $rootScope.showMobileMenu = !$rootScope.showMobileMenu;
+    }
+
+    $rootScope.hideMobileMenu = function() {
+        $rootScope.showMobileMenu = false;
     }
 });
 
