@@ -66,7 +66,10 @@ content {
 
 @media screen and (max-width: 768px) {    
     .main-block {
-        padding: 2px 0px;
+        padding: 2px 3px;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
     }
 
     .navigation ul.hide-mobile-menu {

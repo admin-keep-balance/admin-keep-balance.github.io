@@ -32,6 +32,10 @@ app.config(function($routeProvider) {
             templateUrl: './app/orders/orders.htm',
             controller: 'OrdersCtrl'
         })
+        .when('/photos', {
+            templateUrl: './app/photos/photos.htm',
+            controller: 'OrdersCtrl'
+        })
         .when('/info/ua', {
             templateUrl: './app/infoUa/info.ua.htm',
             controller: 'InfoUaCtrl'

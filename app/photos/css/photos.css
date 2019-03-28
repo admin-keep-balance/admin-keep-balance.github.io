@@ -1,0 +1,38 @@
+h4 {
+    font-style: italic;
+    margin: 10px 0px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.space {
+    width: 100%;
+    height: 30px;
+}
+
+.photos-container div {
+    padding: 0px;
+}
+
+.img-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    font-size: 70px;
+    z-index: 99999;
+}
+
+*:hover > .img-fluid {
+    opacity: 0.1;
+}
+
+*:hover > .img-centered {
+    display: block;
+    cursor: pointer;
+}

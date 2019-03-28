@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="./app/photos/css/photos.css">
+
+<h3>Фото:</h2>
+
+<form name="photosForm">
+    <div class="container-fluid">
+        <h4>{{ !isEdit ? 'Добавити' : 'Редагувати' }} фото:</h4>
+        <div class="row">
+            <div class="col-sm-12 col-md-5 col-lg-5">
+                <div class="input-group form-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-text-size" aria-hidden="true"></span>
+                    </span>
+
+                    <input type="text" class="form-control" placeholder="Заголовок" ng-model="photo.title" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="input-group form-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+                    </span>
+
+                    <input type="text" class="form-control" placeholder="Мініатюра https://" ng-model="photo.urlSmall" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="input-group form-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                    </span>
+
+                    <input type="text" class="form-control" placeholder="Зображення https://" ng-model="photo.urlLarge" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Зберегти" ng-disabled="photosForm.$pristine">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="space"></div>
+
+<div class="container-fluid photos-container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-4">
+            <img class="img-fluid" src="https://keep-balance.github.io/img/portfolio/thumbnails/img-1.jpg" alt="">                        
+            <div class="img-centered glyphicon glyphicon-pencil"></div>  
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4">
+            <img class="img-fluid" src="https://keep-balance.github.io/img/portfolio/thumbnails/img-2.jpg" alt="">
+            <div class="img-centered glyphicon glyphicon-pencil"></div>  
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4">
+            <img class="img-fluid" src="https://keep-balance.github.io/img/portfolio/thumbnails/img-3.jpg" alt="">
+            <div class="img-centered glyphicon glyphicon-pencil"></div>  
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4">
+            <img class="img-fluid" src="https://keep-balance.github.io/img/portfolio/thumbnails/img-4.jpg" alt="">
+            <div class="img-centered glyphicon glyphicon-pencil"></div>  
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4">
+            <img class="img-fluid" src="https://keep-balance.github.io/img/portfolio/thumbnails/img-5.jpg" alt="">
+            <div class="img-centered glyphicon glyphicon-pencil"></div>  
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4">
+            <img class="img-fluid" src="https://keep-balance.github.io/img/portfolio/thumbnails/img-6.jpg" alt="">
+            <div class="img-centered glyphicon glyphicon-pencil"></div>  
+        </div>
+    </div>
+</div>
