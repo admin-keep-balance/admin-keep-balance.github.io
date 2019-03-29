@@ -37,7 +37,7 @@ app.config(function($routeProvider) {
             controller: 'PhotosCtrl'
         })
         .when('/info/ua', {
-            templateUrl: './app/infoUa/info.ua.htm',
+            templateUrl: './app/info-ua/info.ua.htm',
             controller: 'InfoUaCtrl'
         });
 });
