@@ -25,14 +25,13 @@ app.controller("PhotosCtrl", function($scope, $rootScope, $firebaseArray) {
     $scope.editPhoto = function(photo) {
         $scope.currentPhoto = Object.assign({}, photo);
         $scope.isEdit = true;
-        $scope.photosForm.$pristine = true;
+        $scope.photosForm.$setPristine();
     }
 
     $scope.clear = function() {
         $scope.currentPhoto = {};
         $scope.isEdit = false;
-
-        $scope.photosForm.$pristine = true;
+        $scope.photosForm.$setPristine();
     }
 
     $scope.deletePhoto = function() {

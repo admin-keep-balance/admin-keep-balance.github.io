@@ -11,6 +11,8 @@ app.controller("InfoUaCtrl", function($scope, $rootScope, $firebaseObject) {
             headTitle: $scope.info.headTitle,
             headDesc: $scope.info.headDesc
         });
+
+        $scope.headForm.$setPristine();
     }
 
     $scope.saveAbout = function() {
@@ -18,6 +20,8 @@ app.controller("InfoUaCtrl", function($scope, $rootScope, $firebaseObject) {
             aboutTitle: $scope.info.aboutTitle,
             aboutDesc: $scope.info.aboutDesc
         });
+
+        $scope.aboutForm.$setPristine();
     }
 
     $scope.saveContact = function() {
@@ -25,5 +29,7 @@ app.controller("InfoUaCtrl", function($scope, $rootScope, $firebaseObject) {
             contactTitle: $scope.info.contactTitle,
             contactDesc: $scope.info.contactDesc
         });
+
+        $scope.contactForm.$setPristine();
     }
 });

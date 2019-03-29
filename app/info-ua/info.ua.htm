@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="./app/info-ua/css/info.ua.css">
 
 <h3>Інформація(укр) сайту</h3>
-<form ng-submit="saveHead()">
+<form ng-submit="saveHead()" name="headForm">
     <div class="form-group">
         <label for="headTitle">Заголовок шапки:</label>
         <input type="text" class="form-control" ng-model="info.headTitle" id="headTitle" />
@@ -11,11 +11,11 @@
         <textarea class="form-control" ng-model="info.headDesc" id="headDesc" rows="5"></textarea>
     </div>
     <div class="form-group">
-        <input type="submit" class="btn btn-primary" value="Зберегти" />
+        <input type="submit" class="btn btn-primary" ng-disabled="headForm.$pristine" value="Зберегти" />
     </div>
 </form>
 
-<form ng-submit="saveAbout()">
+<form ng-submit="saveAbout()" name="aboutForm">
     <div class="form-group">
         <label for="aboutTitle">Заголовок загальної інформації:</label>
         <input type="text" class="form-control" ng-model="info.aboutTitle" id="aboutTitle" />
@@ -25,11 +25,11 @@
         <textarea class="form-control" ng-model="info.aboutDesc" id="aboutDesc" rows="5"></textarea>
     </div>
     <div class="form-group">
-        <input type="submit" class="btn btn-primary" value="Зберегти" />
+        <input type="submit" class="btn btn-primary" ng-disabled="aboutForm.$pristine" value="Зберегти" />
     </div>
 </form>
 
-<form ng-submit="saveContact()">
+<form ng-submit="saveContact()" name="contactForm">
     <div class="form-group">
         <label for="contactTitle">Заголовок контактів:</label>
         <input type="text" class="form-control" ng-model="info.contactTitle" id="contactTitle" />
@@ -39,6 +39,6 @@
         <textarea class="form-control" ng-model="info.contactDesc" id="contactDesc" rows="5"></textarea>
     </div>
     <div class="form-group">
-        <input type="submit" class="btn btn-primary" value="Зберегти" />
+        <input type="submit" class="btn btn-primary" ng-disabled="contactForm.$pristine" value="Зберегти" />
     </div>
 </form>
