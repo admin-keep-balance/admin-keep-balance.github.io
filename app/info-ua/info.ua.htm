@@ -1,7 +1,26 @@
 <link rel="stylesheet" href="./app/info-ua/css/info.ua.css">
 
 <h3>Інформація(укр) сайту</h3>
-<form ng-submit="saveHead()" name="headForm">
+
+<form ng-submit="saveMenuInfo()" name="menuForm">
+    <div class="form-group">
+        <label for="menuAbout">Пункт про нас:</label>
+        <input type="text" class="form-control" ng-model="info.menuAbout" id="menuAbout" />
+    </div>
+    <div class="form-group">
+        <label for="menuProducts">Пункт продукти:</label>
+        <input type="text" class="form-control" ng-model="info.menuProducts" id="menuProducts" />
+    </div>
+    <div class="form-group">
+        <label for="menuContact">Пункт контакти:</label>
+        <input type="text" class="form-control" ng-model="info.menuContact" id="menuContact" />
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" ng-disabled="menuForm.$pristine" value="Зберегти" />
+    </div>
+</form>
+
+<form ng-submit="saveHeadInfo()" name="headForm">
     <div class="form-group">
         <label for="headTitle">Заголовок шапки:</label>
         <input type="text" class="form-control" ng-model="info.headTitle" id="headTitle" />
@@ -15,7 +34,7 @@
     </div>
 </form>
 
-<form ng-submit="saveAbout()" name="aboutForm">
+<form ng-submit="saveAboutInfo()" name="aboutForm">
     <div class="form-group">
         <label for="aboutTitle">Заголовок загальної інформації:</label>
         <input type="text" class="form-control" ng-model="info.aboutTitle" id="aboutTitle" />
@@ -29,7 +48,7 @@
     </div>
 </form>
 
-<form ng-submit="saveContact()" name="contactForm">
+<form ng-submit="saveContactInfo()" name="contactForm">
     <div class="form-group">
         <label for="contactTitle">Заголовок контактів:</label>
         <input type="text" class="form-control" ng-model="info.contactTitle" id="contactTitle" />
@@ -39,6 +58,70 @@
         <textarea class="form-control" ng-model="info.contactDesc" id="contactDesc" rows="5"></textarea>
     </div>
     <div class="form-group">
+        <label for="contactPhone">Телефон:</label>
+        <input type="text" class="form-control" ng-model="info.contactPhone" id="contactPhone" />
+    </div>
+    <div class="form-group">
+        <label for="contactInstagram">Інстаграм:</label>
+        <input type="text" class="form-control" ng-model="info.contactInstagram" id="contactInstagram" />
+    </div>
+    <div class="form-group">
+        <label for="copyright">Копірайт:</label>
+        <input type="text" class="form-control" ng-model="info.copyright" id="copyright" />
+    </div>
+    <div class="form-group">
         <input type="submit" class="btn btn-primary" ng-disabled="contactForm.$pristine" value="Зберегти" />
+    </div>
+</form>
+
+<form ng-submit="savePriceInfo()" name="priceForm">
+    <div class="form-group">
+        <label for="priceTitle">Заголовок ціни:</label>
+        <input type="text" class="form-control" ng-model="info.priceTitle" id="priceTitle" />
+    </div>
+    <div class="form-group">
+        <label for="priceOld">Стара ціна:</label>
+        <input type="text" class="form-control" ng-model="info.priceOld" id="priceOld" />
+    </div>
+    <div class="form-group">
+        <label for="priceNew">Нова ціна:</label>
+        <input type="text" class="form-control" ng-model="info.priceNew" id="priceNew" />
+    </div>
+    <div class="form-group">
+        <label for="priceOrderButton">Кнопка замовити:</label>
+        <input type="text" class="form-control" ng-model="info.priceOrderButton" id="priceOrderButton" />
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" ng-disabled="priceForm.$pristine" value="Зберегти" />
+    </div>
+</form>
+
+<form ng-submit="saveModalInfo()" name="modalForm">
+    <div class="form-group">
+        <label for="modalTitle">Заголовок модалки:</label>
+        <input type="text" class="form-control" ng-model="info.modalTitle" id="modalTitle" />
+    </div>
+    <div class="form-group">
+        <label for="modalFieldName">Назва поля ім'я:</label>
+        <input type="text" class="form-control" ng-model="info.modalFieldName" id="modalFieldName" />
+    </div>
+    <div class="form-group">
+        <label for="modalFieldPhone">Назва поля телефон:</label>
+        <input type="text" class="form-control" ng-model="info.modalFieldPhone" id="modalFieldPhone" />
+    </div>
+    <div class="form-group">
+        <label for="modalFieldPromo">Назва поля промо:</label>
+        <input type="text" class="form-control" ng-model="info.modalFieldPromo" id="modalFieldPromo" />
+    </div>
+    <div class="form-group">
+        <label for="modalSendButton">Назва кнопки замовити:</label>
+        <input type="text" class="form-control" ng-model="info.modalSendButton" id="modalSendButton" />
+    </div>
+    <div class="form-group">
+        <label for="modalCloseButton">Назва кнопки закрити:</label>
+        <input type="text" class="form-control" ng-model="info.modalCloseButton" id="modalCloseButton" />
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" ng-disabled="modalForm.$pristine" value="Зберегти" />
     </div>
 </form>

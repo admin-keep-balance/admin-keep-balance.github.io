@@ -6,7 +6,17 @@ app.controller("InfoUaCtrl", function($scope, $rootScope, $firebaseObject) {
     $scope.info = $firebaseObject(infoRepository);
     
     // Public Methods
-    $scope.saveHead = function() {
+    $scope.saveMenuInfo = function() {
+        infoRepository.update({
+            menuAbout: $scope.info.menuAbout,
+            menuProducts: $scope.info.menuProducts,
+            menuContact: $scope.info.menuContact
+        });
+
+        $scope.menuForm.$setPristine();
+    }
+
+    $scope.saveHeadInfo = function() {
         infoRepository.update({
             headTitle: $scope.info.headTitle,
             headDesc: $scope.info.headDesc
@@ -15,7 +25,7 @@ app.controller("InfoUaCtrl", function($scope, $rootScope, $firebaseObject) {
         $scope.headForm.$setPristine();
     }
 
-    $scope.saveAbout = function() {
+    $scope.saveAboutInfo = function() {
         infoRepository.update({
             aboutTitle: $scope.info.aboutTitle,
             aboutDesc: $scope.info.aboutDesc
@@ -24,12 +34,39 @@ app.controller("InfoUaCtrl", function($scope, $rootScope, $firebaseObject) {
         $scope.aboutForm.$setPristine();
     }
 
-    $scope.saveContact = function() {
+    $scope.saveContactInfo = function() {
         infoRepository.update({
             contactTitle: $scope.info.contactTitle,
-            contactDesc: $scope.info.contactDesc
+            contactDesc: $scope.info.contactDesc,
+            contactPhone: $scope.info.contactPhone,
+            contactInstagram: $scope.info.contactInstagram,
+            copyright: $scope.info.copyright
         });
 
         $scope.contactForm.$setPristine();
+    }
+
+    $scope.savePriceInfo = function() {
+        infoRepository.update({
+            priceTitle: $scope.info.priceTitle,
+            priceOld: $scope.info.priceOld,
+            priceNew: $scope.info.priceNew,
+            priceOrderButton: $scope.info.priceOrderButton
+        });
+
+        $scope.priceForm.$setPristine();
+    }
+
+    $scope.saveModalInfo = function() {
+        infoRepository.update({
+            modalTitle: $scope.info.modalTitle,
+            modalFieldName: $scope.info.modalFieldName,
+            modalFieldPhone: $scope.info.modalFieldPhone,
+            modalFieldPromo: $scope.info.modalFieldPromo,
+            modalSendButton: $scope.info.modalSendButton,
+            modalCloseButton: $scope.info.modalCloseButton
+        });
+
+        $scope.modalForm.$setPristine();
     }
 });
